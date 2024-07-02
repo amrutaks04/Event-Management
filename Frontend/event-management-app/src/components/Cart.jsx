@@ -24,7 +24,7 @@ const Cart = () => {
             }
 
             try {
-                const response = await fetch(`https://eventapi-mr8f.onrender.com/getcart?username=${username}`);
+                const response = await fetch(`https://eventbackend-1.onrender.com/getcart?username=${username}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch cart items');
                 }

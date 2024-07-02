@@ -35,7 +35,7 @@ const CreateEvent = () => {
     formData.append('image', image);
 
     try {
-      const response = await fetch('https://eventapi-mr8f.onrender.com/add-user-event', {
+      const response = await fetch('https://eventbackend-1.onrender.com/add-user-event', {
         method: 'POST',
         body: formData,
       });

@@ -20,7 +20,7 @@ const Login = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch('https://eventapi-mr8f.onrender.com/login', { 
+            const response = await fetch('https://eventbackend-1.onrender.com/login', { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

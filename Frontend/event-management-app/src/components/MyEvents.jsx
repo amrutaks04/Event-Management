@@ -45,7 +45,7 @@ const MyEvents = () => {
 
   const fetchUserEvents = async (username) => {
     try {
-      const response = await fetch(`https://eventapi-mr8f.onrender.com/user-events?username=${username}`);
+      const response = await fetch(`https://eventbackend-1.onrender.com/user-events?username=${username}`);
       if (response.ok) {
         const data = await response.json();
         setEvents(data);
@@ -89,7 +89,7 @@ const MyEvents = () => {
 
   const handleDelete = async (eventId) => {
     try {
-      const response = await fetch(`https://eventapi-mr8f.onrender.com/user-events/${eventId}`, {
+      const response = await fetch(`https://eventbackend-1.onrender.com/user-events/${eventId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -112,7 +112,7 @@ const MyEvents = () => {
     }
 
     try {
-      const response = await fetch(`https://eventapi-mr8f.onrender.com/user-events/${currentEvent._id}`, {
+      const response = await fetch(`https://eventbackend-1.onrender.com/user-events/${currentEvent._id}`, {
         method: 'PUT',
         body: formDataToSubmit,
       });
@@ -137,7 +137,7 @@ const MyEvents = () => {
         ) : (
           events.map(event => (
             <div key={event._id} className="event">
-              <img src={`https://eventapi-mr8f.onrender.com${event.imageUrl}`} alt={event.title} />
+              <img src={`https://eventbackend-1.onrender.com${event.imageUrl}`} alt={event.title} />
               <h3>{event.title}</h3>
               <p><strong>Description:</strong> {event.description}</p>
               <p><strong>Date:</strong> {new Date(event.date).toLocaleDateString()}</p>

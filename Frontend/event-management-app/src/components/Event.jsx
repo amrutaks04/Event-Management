@@ -14,7 +14,7 @@ const Events = () => {
             setLoading(true);
             setError(null);
             try {
-                const response = await fetch(`https://eventapi-mr8f.onrender.com/req-event?category=${category}`);
+                const response = await fetch(`https://eventbackend-1.onrender.com/req-event?category=${category}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');
                 }
